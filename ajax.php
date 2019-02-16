@@ -252,7 +252,7 @@ SELECT
   ar.urlimage,
   CONCAT(u.firstname, ' ', u.lastname) AS user 
 FROM articles ar
-JOIN users u on u.id = ar.userid
+LEFT JOIN users u on u.id = ar.userid
 SQL;
 }
 
