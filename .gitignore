@@ -1,2 +1,3 @@
 .idea
 configsecret.php
+beheer/*.json.gz
