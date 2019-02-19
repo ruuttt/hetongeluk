@@ -278,7 +278,10 @@ a {
 }
 
 .iconSmall {
-  display:             inline-block;
+  display:             flex;
+  align-items:         center;
+  justify-content:     center;
+  color:               #000000;
   outline:             none;
   height:              18px;
   width:               18px;
@@ -287,6 +290,11 @@ a {
   background-size:     17px;
   background-repeat:   no-repeat;
   background-position: center;
+}
+
+.iconInput {
+  height: 100%;
+  width:  20px;
 }
 
 .iconMedium {
@@ -384,7 +392,7 @@ a {
 
 .dropInput {
   display:       flex;
-  width:         100px;
+  width:         150px;
   align-items:   center;
   overflow:      hidden;
   padding-right: 20px;
@@ -394,9 +402,16 @@ a {
 .inputIcons {
   display:     flex;
   align-items: center;
-  flex-wrap:   wrap;
-  white-space: nowrap;
+  flex-wrap:   nowrap;
   color:       #888;
+}
+
+.inputIconGroup {
+  display:       flex;
+  align-items:   center;
+  flex-wrap:     nowrap;
+  border-bottom: 1px solid #aaa;
+  margin-right:  2px;
 }
 
 .inputArrowDown {
@@ -420,7 +435,7 @@ a {
   max-height:       500px;
   overflow-x:       hidden;
   overflow-y:       auto;
-  top:              24px;
+  top:              27px;
   left:             0;
   margin-top:       1px;
   z-index:          1001;
@@ -436,8 +451,8 @@ a {
 .optionCheckImage {
   display:         flex;
   align-items:     center;
-  justify-content: flex-end;
-  padding:         2px 2px 2px 16px;
+  justify-content: space-between;
+  padding:         0 0 0 16px;
 }
 
  .toolbarItem {
@@ -470,6 +485,40 @@ a {
   background-repeat:   no-repeat;
   background-position: center;
   border-radius:       5px;
+}
+
+.searchDisplayIcon {
+  display:             flex;
+  align-items:         center;
+  justify-content:     center;
+  color:               #000000;
+  outline:             none;
+  height:              18px;
+  width:               18px;
+  padding:             1px;
+  background-size:     17px;
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+.searchIcon {
+  display:             flex;
+  align-items:         center;
+  justify-content:     center;
+  color:               #000000;
+  opacity:             0.15;
+  height:              20px;
+  width:               20px;
+  border:              1px solid #fff;
+  margin:              0 2px;
+  background-size:     16px;
+  background-repeat:   no-repeat;
+  background-position: center;
+}
+
+.itemSelected .inputSelectButtonSelected {
+  opacity: 1;
+  color:   #fff;
 }
 
 .buttonSelectionSmall {
@@ -567,6 +616,7 @@ a {
 .bgDeadBlack {             background-image: url(/images/persondead_black.svg);}
 .bgInjured {               background-image: url(/images/person_injured.svg);}
 .bgUnharmed {              background-image: url(/images/unharmed.svg);}
+.bgRestricted {            background-image: url(/images/restricted.svg);}
 
 .bgPedestrian {            background-image: url(/images/pedestrian.svg);}
 .bgBicycle {               background-image: url(/images/bicycle.svg);}
@@ -585,6 +635,7 @@ a {
 .bgMopedCar {              background-image: url(/images/mopedcar.svg);}
 .bgUnknown {               background-image: url(/images/unknown.svg);}
 
+.bgUnilateral {            background-image: url(/images/unilateral.svg);}
 .bgChild {                 background-image: url(/images/child.svg);}
 .bgPet {                   background-image: url(/images/pet.svg);}
 .bgAlcohol {               background-image: url(/images/alcohol.svg);}
@@ -1064,6 +1115,11 @@ a {
   margin: 0 2px;
 }
 
+.tableClickRows td {
+  cursor: pointer;
+  color:  #df5b57;
+}
+
 .trSelected td, .optionCheckImage:hover {
   color:            #ffffff;
   background-color: #4D90FE;
@@ -1207,11 +1263,15 @@ a {
 }
 
 .thumbPersons {
+  display:          flex;
+  flex-direction:   row;
+  justify-content:  center;
   position:         absolute;
   left:             0;
   right:            0;
   top:              0;
   text-align:       center;
+  visibility: ;
 }
 
 .thumbDetails {
